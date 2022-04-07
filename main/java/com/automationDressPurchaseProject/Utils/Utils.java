@@ -39,7 +39,15 @@ public class Utils extends TestBase {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
+	}
+		
+		public static void javascriptClick(WebElement element) {
+				jse.executeScript("arguments[0].click();", element);
+			}
+		
+		
+		
+	
 
 	}
 
-}

@@ -107,7 +107,7 @@ public class TestBase {
 			String documentIsReady = jse.executeScript("return document.readyState").toString();
 			while (true) {
 				if (documentIsReady.equalsIgnoreCase("complete")) {
-					logger.info("Page has loaded completely......");
+					logger.info("Page has loaded completely.....");
 					return true;
 				} else {
 					return false;
