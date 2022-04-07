@@ -61,6 +61,10 @@ public class Utils extends TestBase {
 			return new WebDriverWait(wd, timeOutInSeconds)
 					.until(ExpectedConditions.elementSelectionStateToBe(element, false));
 		}
+		
+		public void switchToFrame(WebElement element) {
+			wd.switchTo().frame(waitForElementToBeVisible(element, 5));
+		}
 
 	}
 
