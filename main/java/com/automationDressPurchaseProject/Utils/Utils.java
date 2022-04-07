@@ -53,7 +53,14 @@ public class Utils extends TestBase {
 			return new WebDriverWait(wd, timeOutInSeconds).until(ExpectedConditions.elementToBeClickable(element));
 		}
 		
-	
+		public static WebElement waitForElementToBeVisible(WebElement element, int timeOutInSeconds) {
+			return new WebDriverWait(wd, timeOutInSeconds).until(ExpectedConditions.visibilityOf(element));
+		}
+		
+		public static Boolean waitForElementToBeSelectable(WebElement element, int timeOutInSeconds) {
+			return new WebDriverWait(wd, timeOutInSeconds)
+					.until(ExpectedConditions.elementSelectionStateToBe(element, false));
+		}
 
 	}
 

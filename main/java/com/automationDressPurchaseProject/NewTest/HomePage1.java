@@ -19,8 +19,10 @@ public class HomePage1 extends TestBase {
 	WebElement clickSignin;
 
 	public LoginPage clickSignInBtn() {
+		//waiting for element to be visible
+		Utils.waitForElementToBeVisible(clickSignin, 5);
+		Utils.waitForElementToBeSelectable(clickSignin, 2);
 		clickSignin.click();
-		
 		return new LoginPage();
 	}
 
