@@ -18,7 +18,9 @@ public class MyAccountPage extends TestBase {
 	WebElement clickOnWomenLink;
 
 	public WomenDressesPage clickWomenTab() {
-		clickOnWomenLink.click();		
+		//clickOnWomenLink.click();		
+		
+		Utils.clickOnElement(clickOnWomenLink);
 		
 		return new WomenDressesPage();
 

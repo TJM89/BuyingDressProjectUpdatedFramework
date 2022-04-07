@@ -45,7 +45,13 @@ public class Utils extends TestBase {
 				jse.executeScript("arguments[0].click();", element);
 			}
 		
+		public static void clickOnElement(WebElement element) {
+			waitForElementToBeClickable(element, 5).click();
+		}
 		
+		public static WebElement waitForElementToBeClickable(WebElement element, int timeOutInSeconds) {
+			return new WebDriverWait(wd, timeOutInSeconds).until(ExpectedConditions.elementToBeClickable(element));
+		}
 		
 	
 
